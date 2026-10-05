@@ -1,0 +1,21 @@
+[project]
+name = "servidor-mcp"
+version = "1.0.0"
+description = "Servidor MCP da Central de Salas (Hill Valley Tech) - desafio A Ponte"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp==1.30.0",
+    "pydantic==2.13.5",
+    "starlette==0.52.1",
+    "uvicorn[standard]==0.54.0",
+]
+
+[project.scripts]
+servidor-mcp = "servidor_mcp.main:executar"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,20 @@
+[project]
+name = "agente-central-de-salas"
+version = "1.0.0"
+description = "Agente A2A / host MCP da Central de Salas (Hill Valley Tech) - desafio A Ponte"
+requires-python = ">=3.10"
+dependencies = [
+    "starlette==0.52.1",
+    "uvicorn[standard]==0.54.0",
+    "httpx==0.28.1",
+]
+
+[project.scripts]
+agente = "agente.main:executar"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
